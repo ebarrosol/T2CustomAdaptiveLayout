@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="T2CustomAdaptiveLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-8J-B3t" userLabel="Logo">
+                                <rect key="frame" x="-100" y="0.0" width="800" height="240"/>
+                                <variation key="heightClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="40" width="270" height="321"/>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7D4-ax-YT6" userLabel="TextContainer">
+                                <rect key="frame" x="0.0" y="260" width="600" height="340"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control de correspondencia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UPh-tq-Hov" userLabel="Titulo">
+                                        <rect key="frame" x="0.0" y="10" width="600" height="118"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documentos pendientes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E3o-NC-eUr" userLabel="Leyenda">
+                                        <rect key="frame" x="-314" y="188" width="1228" height="142"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="120"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="65"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59607843137254901" green="0.98431372549019602" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="E3o-NC-eUr" secondAttribute="centerX" id="Puf-xa-52D"/>
+                                    <constraint firstItem="UPh-tq-Hov" firstAttribute="width" secondItem="7D4-ax-YT6" secondAttribute="width" id="PyH-RP-sqe"/>
+                                    <constraint firstAttribute="centerX" secondItem="UPh-tq-Hov" secondAttribute="centerX" id="hXO-ho-nBp"/>
+                                    <constraint firstAttribute="bottom" secondItem="E3o-NC-eUr" secondAttribute="bottom" constant="10" id="mMd-BR-xo5"/>
+                                    <constraint firstItem="UPh-tq-Hov" firstAttribute="top" secondItem="7D4-ax-YT6" secondAttribute="top" constant="10" id="xeO-Xg-UGm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7D4-ax-YT6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0vb-R2-ZnU"/>
+                            <constraint firstItem="7D4-ax-YT6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Kq-XT-8Md"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7D4-ax-YT6" secondAttribute="bottom" id="59L-Oh-UFR"/>
+                            <constraint firstItem="7D4-ax-YT6" firstAttribute="top" secondItem="pvg-8J-B3t" secondAttribute="bottom" constant="20" id="Cm8-3b-5aA"/>
+                            <constraint firstItem="7D4-ax-YT6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="Ela-bc-UX9"/>
+                            <constraint firstItem="pvg-8J-B3t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="VVU-IM-TRN"/>
+                            <constraint firstAttribute="centerY" secondItem="pvg-8J-B3t" secondAttribute="centerY" id="XmS-tm-GJq"/>
+                            <constraint firstAttribute="trailing" secondItem="7D4-ax-YT6" secondAttribute="trailing" id="hDF-sa-uCd"/>
+                            <constraint firstAttribute="centerY" secondItem="pvg-8J-B3t" secondAttribute="centerY" id="hbh-xg-jbg"/>
+                            <constraint firstItem="pvg-8J-B3t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="iae-kC-2i8"/>
+                            <constraint firstAttribute="centerX" secondItem="pvg-8J-B3t" secondAttribute="centerX" id="k8s-TG-rfI"/>
+                            <constraint firstItem="pvg-8J-B3t" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="tKx-A1-Tjq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VVU-IM-TRN"/>
+                                <exclude reference="XmS-tm-GJq"/>
+                                <exclude reference="hbh-xg-jbg"/>
+                                <exclude reference="0vb-R2-ZnU"/>
+                                <exclude reference="Ela-bc-UX9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="VVU-IM-TRN"/>
+                                <include reference="XmS-tm-GJq"/>
+                                <include reference="hbh-xg-jbg"/>
+                                <exclude reference="iae-kC-2i8"/>
+                                <exclude reference="k8s-TG-rfI"/>
+                                <exclude reference="tKx-A1-Tjq"/>
+                                <include reference="0vb-R2-ZnU"/>
+                                <exclude reference="3Kq-XT-8Md"/>
+                                <exclude reference="Cm8-3b-5aA"/>
+                                <include reference="Ela-bc-UX9"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="800" height="321"/>
+    </resources>
 </document>
